@@ -7,7 +7,7 @@ import configService from "../auth/configService";
 import axios from "axios";
 import signalR from "@microsoft/signalr";
 export default {
-  name: "IoT",
+  name: "signalRClient",
   methods: {
     async ConnectToHub() {
      
@@ -62,7 +62,7 @@ export default {
     const signalR = require("@microsoft/signalr");
 
     //{headers.x-ms-client-principal-id}
-    console.log("IoT component created");
+    console.log("SignalR component created");
     let that = this;
    this.ConnectToHub();
     // LOOK! YOU WILL NEED TO UPDATE THESE VALUES!

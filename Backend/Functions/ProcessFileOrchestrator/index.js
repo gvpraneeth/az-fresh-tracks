@@ -24,7 +24,6 @@ module.exports = df.orchestrator(function* (context) {
     }
     var parsedGPX =yield context.df.callActivity("ProcessGPXFIle", context.bindingData.input);
     var savedMeta = yield context.df.callActivity("SaveMetatoDB", parsedGPX);
-     var IotResult = yield  context.df.callActivity("PublishtoIOT", parsedGPX.body.userID);
+     var result = yield  context.df.callActivity("PublishtoSignal", parsedGPX.body.userID);
 
-    
 });
